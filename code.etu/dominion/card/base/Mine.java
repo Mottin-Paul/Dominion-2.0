@@ -31,7 +31,7 @@ public class Mine extends ActionCard {
 		if(!player.getTreasureCards().isEmpty()) {
 			decision = player.chooseCard("Choisissez la carte trésor que vous voulez écarter", player.getTreasureCards(), false);		
 			card_trash = player.getTreasureCards().getCard(decision); // On récupere la carte que le joueur veut écarter
-			player.removeHand(card_trash.getName()); // On l'a retire de sa main
+			player.remove_hand(card_trash.getName()); // On l'a retire de sa main
 			player.getGame().addTrashCard(card_trash); // On l'écarte du jeu
 
 			
@@ -47,7 +47,7 @@ public class Mine extends ActionCard {
 			
 			
 			decision = player.chooseCard("Choisissez la carte trésor que vous voulez recevoir",card_treasure_available, false);
-			player.addHand(player.getGame().removeFromSupply(decision));	 // On ajoute dans la main la carte que le joueur a choisit et on la retire de la réserve
+			player.add_hand(player.getGame().removeFromSupply(decision));	 // On ajoute dans la main la carte que le joueur a choisit et on la retire de la réserve
 		}
 		
 	}

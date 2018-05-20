@@ -48,7 +48,7 @@ public class Moat extends ReactionCard {
 		// Le joueur pioche 2 fois
 		int i = 0;
 		while( i < 2){
-			player.addHand(player.drawCard());
+			player.add_hand(player.drawCard());
 			i++;
 		}	
 	}

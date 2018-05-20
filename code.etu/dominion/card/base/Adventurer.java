@@ -19,7 +19,7 @@ public class Adventurer extends ActionCard {
 			if(card !=null) {
 				card.toString();
 				if(card.getTypes().contains(CardType.Treasure)) {
-					player.getHand().add(card);
+					player.get_hand().add(card);
 					nb_card_revealed++;
 				}
 				else {

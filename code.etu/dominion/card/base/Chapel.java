@@ -42,7 +42,7 @@ public class Chapel extends ActionCard {
 			int i = 0;
 			while( i<card_to_remove.size()) {
 				player.getGame().setTrashCard(card_to_remove.get(i));
-				player.removeHand(card_to_remove.get(i).getName());
+				player.remove_hand(card_to_remove.get(i).getName());
 				i++;
 			}
 		}

@@ -43,7 +43,7 @@ public class Thief extends AttackCard {
 				// On appelle la fonction reaction de la carte qui va demander a l'adversaire si il veut utiliser sa carte Moat
 				if(!((Moat) player.otherPlayers().get(i).cardsInHand().getCard("Moat")).reaction(player.otherPlayers().get(i))) {
 					// On récupere la pioche de l'adversaire
-					card_player = adversary.get(i).getDraw();
+					card_player = adversary.get(i).get_draw();
 					
 					// Pour les 2 premieres cartes de sa pioche
 					int j = 0; 
@@ -52,23 +52,23 @@ public class Thief extends AttackCard {
 							treasure_card.add(card_player.get(j)); // On stocke cette carte dans la liste des cartes trésors
 						}
 						else {
-							adversary.get(i).addDiscard(card_player.get(j)); // Sinon on défausse cette carte
+							adversary.get(i).add_discard(card_player.get(j)); // Sinon on défausse cette carte
 						}
 						j++;
 					}
 					
 					if(treasure_card.size() == 1){ // Si il n'y a qu'une carte trésor
 						card_trashed.add(treasure_card.get(0)); // On stocke cette carte dans la liste des cartes a écarter
-						adversary.get(i).removeDraw(treasure_card.get(0).getName()); // On l'enve de la pioche de l'adversaire
+						adversary.get(i).remove_draw(treasure_card.get(0).getName()); // On l'enve de la pioche de l'adversaire
 					}
 					
 					else if(treasure_card.size() == 2){ // Si il y a 2 cartes trésors
 						decision = player.chooseCard("Choisissez quelle carte vous voulez écarter", treasure_card, false);	
 						card_trashed.add(treasure_card.getCard(decision)); // On stocke celle que l'on veut écarter
-						adversary.get(i).removeDraw(treasure_card.getCard(decision).getName()); // On l'a retire de la pioche de l'adversaire
+						adversary.get(i).remove_draw(treasure_card.getCard(decision).getName()); // On l'a retire de la pioche de l'adversaire
 						treasure_card.remove(treasure_card.getCard(decision)); // On retire de la liste des cartes trésors celle que l'on veut écarter
-						adversary.get(i).removeDraw(treasure_card.get(0).getName()); // On retire de la pioche la seule carte trésor qui reste dans la liste des cartes trésors
-						adversary.get(i).addDiscard(treasure_card.get(0)); // On défausse la carte restante
+						adversary.get(i).remove_draw(treasure_card.get(0).getName()); // On retire de la pioche la seule carte trésor qui reste dans la liste des cartes trésors
+						adversary.get(i).add_discard(treasure_card.get(0)); // On défausse la carte restante
 					}	
 					treasure_card.clear(); // On vide la liste des cartes trésors
 					card_player.clear(); // On vide la liste des cartes de l'adversaire
@@ -76,7 +76,7 @@ public class Thief extends AttackCard {
 			}
 			else {
 				// On récupere la pioche de l'adversaire
-				card_player = adversary.get(i).getDraw();
+				card_player = adversary.get(i).get_draw();
 				
 				// Pour les 2 premieres cartes de sa pioche
 				int j2 = 0;
@@ -85,23 +85,23 @@ public class Thief extends AttackCard {
 						treasure_card.add(card_player.get(j2)); // On stocke cette carte dans la liste des cartes trésors
 					}
 					else {
-						adversary.get(i).addDiscard(card_player.get(j2)); // Sinon on défausse cette carte
+						adversary.get(i).add_discard(card_player.get(j2)); // Sinon on défausse cette carte
 					}
 					j2++;
 				}
 				
 				if(treasure_card.size() == 1){ // Si il n'y a qu'une carte trésor
 					card_trashed.add(treasure_card.get(0)); // On stocke cette carte dans la liste des cartes a écarter
-					adversary.get(i).removeDraw(treasure_card.get(0).getName()); // On l'enve de la pioche de l'adversaire
+					adversary.get(i).remove_draw(treasure_card.get(0).getName()); // On l'enve de la pioche de l'adversaire
 				}
 				
 				else if(treasure_card.size() == 2){ // Si il y a 2 cartes trésors
 					decision = player.chooseCard("Choisissez quelle carte vous voulez écarter", treasure_card, false);	
 					card_trashed.add(treasure_card.getCard(decision)); // On stocke celle que l'on veut écarter
-					adversary.get(i).removeDraw(treasure_card.getCard(decision).getName()); // On l'a retire de la pioche de l'adversaire
+					adversary.get(i).remove_draw(treasure_card.getCard(decision).getName()); // On l'a retire de la pioche de l'adversaire
 					treasure_card.remove(treasure_card.getCard(decision)); // On retire de la liste des cartes trésors celle que l'on veut écarter
-					adversary.get(i).removeDraw(treasure_card.get(0).getName()); // On retire de la pioche la seule carte trésor qui reste dans la liste des cartes trésors
-					adversary.get(i).addDiscard(treasure_card.get(0)); // On défausse la carte restante
+					adversary.get(i).remove_draw(treasure_card.get(0).getName()); // On retire de la pioche la seule carte trésor qui reste dans la liste des cartes trésors
+					adversary.get(i).add_discard(treasure_card.get(0)); // On défausse la carte restante
 				}	
 				treasure_card.clear(); // On vide la liste des cartes trésors
 				card_player.clear(); // On vide la liste des cartes de l'adversaire
@@ -119,7 +119,7 @@ public class Thief extends AttackCard {
 			while(i2<card_trashed.size()) {
 				decision = player.chooseCard("Choisissez les cartes que vous voulez recevoir", card_trashed, false);
 				// On ajoute dans la défausse du joueur la carte choisit
-				player.addDiscard(card_trashed.getCard(decision));
+				player.add_discard(card_trashed.getCard(decision));
 				// On retire de la liste des cartes écartés celle que l'on a choisit
 				card_trashed.remove(card_trashed.getCard(decision));	
 				i2++;

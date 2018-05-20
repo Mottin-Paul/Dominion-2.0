@@ -30,14 +30,14 @@ public class CouncilRoom extends ActionCard {
 		// Le joueur pioche 4 fois
 		int i = 0;
 		while( i<4 ){
-			player.addHand(player.drawCard());
+			player.add_hand(player.drawCard());
 				i++;
 		}	
 		
 		// Tous les adversaires du joueur pioche une carte
 		int i2=0;
 		while(i2<player.getGame().otherPlayers(player).size()){
-			player.getGame().otherPlayers(player).get(i2).addHand(player.getGame().otherPlayers(player).get(i2).drawCard());
+			player.getGame().otherPlayers(player).get(i2).add_hand(player.getGame().otherPlayers(player).get(i2).drawCard());
 		i2++;
 		}
 	}

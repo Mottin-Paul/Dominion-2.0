@@ -15,13 +15,13 @@ public class Witch extends AttackCard {
   public void play(Player player) {
 	  int i=0;
     while(i<2){
-    	player.getHand().add(player.drawCard());
+    	player.get_hand().add(player.drawCard());
     	i++;
     }
     List<Player> op;
     op=player.getGame().otherPlayers(player);   
     for (Player loop_p : op){
-      loop_p.getDiscard().add(loop_p.getGame().getFromSupply("Curse"));
+      loop_p.get_discard().add(loop_p.getGame().getFromSupply("Curse"));
       loop_p.getGame().removeFromSupply("Curse");
     }
   }

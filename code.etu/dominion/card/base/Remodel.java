@@ -31,7 +31,7 @@ public class Remodel extends ActionCard {
 		if(!player.cardsInHand().isEmpty()) {
 			decision = player.chooseCard("Choisissez la carte que vous voulez écarter", player.cardsInHand(), false);
 			card_trash = player.cardsInHand().getCard(decision); // On récupere la carte que l'on veut écarter
-			player.removeHand(card_trash.getName()); // On la retire de la main
+			player.remove_hand(card_trash.getName()); // On la retire de la main
 			player.getGame().addTrashCard(card_trash); // On l'écarte
 			
 					

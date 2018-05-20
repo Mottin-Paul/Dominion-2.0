@@ -14,7 +14,7 @@ public class Library extends ActionCard {
 	@Override
 	public void play(Player player) {
 		CardList apart_cards=new CardList();
-		while(player.getHand().size()<=7) {
+		while(player.get_hand().size()<=7) {
 			Card card=player.drawCard();
 			if(card !=null) {				
 				
@@ -24,11 +24,11 @@ public class Library extends ActionCard {
 						apart_cards.add(card);
 					}
 					else {
-						player.getHand().add(card);
+						player.get_hand().add(card);
 					}
 				}
 				else {
-					player.getHand().add(card);
+					player.get_hand().add(card);
 				}
 			}
 			else {
@@ -36,7 +36,7 @@ public class Library extends ActionCard {
 			}
 		}
 		for(Card c_loop : apart_cards) {
-			player.getDiscard().add(c_loop);
+			player.get_discard().add(c_loop);
 		}
 		
 	}

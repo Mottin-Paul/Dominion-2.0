@@ -19,10 +19,10 @@ public class Cellar extends ActionCard {
     String choix = "y";
     
     while(choix !=""){
-    CardList card_list = player.getHand();
+    CardList card_list = player.get_hand();
     choix = player.chooseCard("Quelle carte voulez vous défausser?", card_list, true);    
     if(choix!=""){    	
-    	card_list.transferTo(card_list.getCard(choix), player.getDiscard());    	
+    	card_list.transferTo(card_list.getCard(choix), player.get_discard());    	
     	card_list.add(player.drawCard());   	
     }
     else{

@@ -18,7 +18,7 @@ public class Chancellor extends ActionCard {
 	player.incrementMoney(2);
     String decision = player.choose("Voulez-vous défausser votre deck?", Arrays.asList("y","n"), false);
     if (decision.equals("y")){    	
-    	player.getDraw().transferTo(player.getDiscard());    	
+    	player.get_draw().transferTo(player.get_discard());    	
     } 
 }
   

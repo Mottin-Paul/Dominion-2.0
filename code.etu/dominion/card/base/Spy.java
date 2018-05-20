@@ -25,7 +25,7 @@ public class Spy extends AttackCard {
 	
 	public void play(Player player) {
 		// Le joueur pioche une fois
-		player.addHand(player.drawCard());
+		player.add_hand(player.drawCard());
 		// Incrémente le nombre d'action de 1
 		player.incrementActions(1);
 		
@@ -44,13 +44,13 @@ public class Spy extends AttackCard {
 			player_game.add(player.getGame().getPlayer(i));
 			
 			// Si la pioche du joueur n'est pas vide
-			if(!player_game.get(i).getDraw().isEmpty()){
-				first_card_player = player_game.get(i).getDraw().get(0); // On récupere la 1ere carte de sa pioche
+			if(!player_game.get(i).get_draw().isEmpty()){
+				first_card_player = player_game.get(i).get_draw().get(0); // On récupere la 1ere carte de sa pioche
 			}
 			// Sinon
 			else{
-				first_card_player = player_game.get(i).getDiscard().get(0); // On récupere la 1ere carte de sa défausse
-				player_game.get(i).removeDiscard(first_card_player.getName()); // On retire cette carte de sa défausse
+				first_card_player = player_game.get(i).get_discard().get(0); // On récupere la 1ere carte de sa défausse
+				player_game.get(i).remove_discard(first_card_player.getName()); // On retire cette carte de sa défausse
 			}
 				
 			String decision;
@@ -61,13 +61,13 @@ public class Spy extends AttackCard {
 					decision = player.choose("Voulez vous défaussez cette carte ou la replacer sur son deck ?", choice, false);
 					// Si le joueur souhaite défausser cette carte
 					if(decision.equalsIgnoreCase("y")) {
-						player_game.get(i).removeDraw(first_card_player.getName()); // On enleve la carte de la pioche de l'adversaire
-						player_game.get(i).addDiscard(first_card_player);	// On ajoute la carte dans sa défausse
+						player_game.get(i).remove_draw(first_card_player.getName()); // On enleve la carte de la pioche de l'adversaire
+						player_game.get(i).add_discard(first_card_player);	// On ajoute la carte dans sa défausse
 					}
 					
 					// Si le joueur choisit non et que ce n'est pas le joueur qui a joué la carte Spy
 					if(decision.equalsIgnoreCase("n") && !player_game.get(i).equals(player_game.get(0))){
-						player_game.get(i).addDraw(first_card_player); // On remet la carte dans la pioche
+						player_game.get(i).add_draw(first_card_player); // On remet la carte dans la pioche
 					}
 				}
 			}
@@ -75,13 +75,13 @@ public class Spy extends AttackCard {
 				decision = player.choose("Voulez vous défaussez cette carte ou la replacer sur son deck ?", choice, false);
 				// Si le joueur souhaite défausser cette carte
 				if(decision.equalsIgnoreCase("y")) {
-					player_game.get(i).removeDraw(first_card_player.getName()); // On enleve la carte de la pioche de l'adversaire
-					player_game.get(i).addDiscard(first_card_player);	// On ajoute la carte dans sa défausse
+					player_game.get(i).remove_draw(first_card_player.getName()); // On enleve la carte de la pioche de l'adversaire
+					player_game.get(i).add_discard(first_card_player);	// On ajoute la carte dans sa défausse
 				}
 				
 				// Si le joueur choisit non et que ce n'est pas le joueur qui a joué la carte Spy
 				if(decision.equalsIgnoreCase("n") && !player_game.get(i).equals(player_game.get(0))){
-					player_game.get(i).addDraw(first_card_player); // On remet la carte dans la pioche
+					player_game.get(i).add_draw(first_card_player); // On remet la carte dans la pioche
 				}
 			}			
 		i++;		

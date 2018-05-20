@@ -17,13 +17,13 @@ public class Bureaucrat extends AttackCard {
 	public void play(Player player) {
 		Card card = player.getGame().getFromSupply("Silver");
 		if(card!=null){
-			player.getDraw().add(0, card);
+			player.get_draw().add(0, card);
 		}
 		List<Player> op;
 		op=player.getGame().otherPlayers(player);
 		for (Player loop_p : op){
 			int card_showed=0;
-			CardList hand=loop_p.getHand();
+			CardList hand=loop_p.get_hand();
 			CardList victory=new CardList();
 			for(Card c_loop : hand){
 				if(c_loop.getTypes().contains(CardType.Victory)){
@@ -34,7 +34,7 @@ public class Bureaucrat extends AttackCard {
 				String choosed_card_name=loop_p.chooseCard("Quelle carte voulez vous dévoiler et placer sur votre deck?", victory, false);
 				Card choosed_card=victory.getCard(choosed_card_name);
 				System.out.println(choosed_card.toString());
-				hand.transferTo(choosed_card, loop_p.getDraw(), 0);
+				hand.transferTo(choosed_card, loop_p.get_draw(), 0);
 			}
 			else {
 				for(Card c_loop : hand) {

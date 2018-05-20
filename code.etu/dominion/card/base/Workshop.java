@@ -21,7 +21,7 @@ public class Workshop extends ActionCard {
 			if(choosed.getCost()<=4) break;			
 		}
 		if(choosed!=null) {
-			player.getDiscard().add(choosed);
+			player.get_discard().add(choosed);
 		}
 	}
 }

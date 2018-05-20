@@ -16,10 +16,10 @@ public class Moneylender extends ActionCard {
 
 	@Override
 	public void play(Player player) {
-		Card copper=player.getHand().getCard("Copper");
+		Card copper=player.get_hand().getCard("Copper");
 		if(copper!=null){
 			player.incrementMoney(3);
-			player.getHand().transferTo(copper, player.getGame().getTrashedCards());			
+			player.get_hand().transferTo(copper, player.getGame().getTrashedCards());			
 		}		
 	}
 }

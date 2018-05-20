@@ -16,7 +16,7 @@ public class Market extends ActionCard {
 	public Market() { super("Market", 5);	}
 	@Override
   public void play(Player player) {
-		player.getHand().add(player.drawCard());
+		player.get_hand().add(player.drawCard());
 		player.incrementActions(1);
 		player.incrementBuys(1);
 		player.incrementMoney(1);

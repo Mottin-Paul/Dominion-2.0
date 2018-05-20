@@ -40,7 +40,7 @@ public class ThroneRoom extends ActionCard {
 			card_played = player.getActionCards().getCard(decision);
 			
 			player.playCard(card_played); // On joue la carte choisit
-			player.removeInPlay(card_played.getName()); // On la retire du jeu
+			player.remove_in_play(card_played.getName()); // On la retire du jeu
 			player.playCard(card_played); // Et on la rejoue encore une fois
 		}
 		

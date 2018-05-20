@@ -16,9 +16,9 @@ public class Militia extends AttackCard {
 	public void play(Player player) {
 		player.incrementMoney(2);
 		for(Player loop_p : player.otherPlayers()) {
-			while(loop_p.getHand().size()>3) {
-				String choosed_card_name=loop_p.chooseCard("Choisissez une carte à défausser", loop_p.getHand(), false);
-				loop_p.getHand().transferTo(loop_p.getHand().getCard(choosed_card_name), loop_p.getDiscard());
+			while(loop_p.get_hand().size()>3) {
+				String choosed_card_name=loop_p.chooseCard("Choisissez une carte à défausser", loop_p.get_hand(), false);
+				loop_p.get_hand().transferTo(loop_p.get_hand().getCard(choosed_card_name), loop_p.get_discard());
 			}
 		}		
 	}

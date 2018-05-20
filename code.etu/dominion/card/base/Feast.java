@@ -14,7 +14,7 @@ public class Feast extends ActionCard {
 
 	@Override
 	public void play(Player player) {
-		player.getHand().transferTo(this, player.getGame().getTrashedCards());
+		player.get_hand().transferTo(this, player.getGame().getTrashedCards());
 		CardList supply_cards=player.getGame().availableSupplyCards();
 		Card choosed=null;
 		while (true) {
@@ -23,7 +23,7 @@ public class Feast extends ActionCard {
 			if(choosed.getCost()<=5) break;			
 		}
 		if(choosed!=null) {
-			player.getDiscard().add(choosed);
+			player.get_discard().add(choosed);
 		}
 		
 		
