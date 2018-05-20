@@ -1,4 +1,5 @@
 package dominion.card.common;
+
 import dominion.*;
 import dominion.card.*;
 
@@ -8,8 +9,10 @@ import dominion.card.*;
  * 6 VP
  */
 public class Province extends VictoryCard {
-	public Province() { super("Province", 8);	}
-	
+	public Province() {
+		super("Province", 8);
+	}
+
 	public int victoryValue(Player player) {
 		return 6;
 	}
@@ -17,6 +20,6 @@ public class Province extends VictoryCard {
 	@Override
 	public void play(Player player) {
 		// TODO Auto-generated method stub
-		
+
 	}
 }
