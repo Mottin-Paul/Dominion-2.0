@@ -1,5 +1,5 @@
 package dominion.card.base;
-import java.util.*;
+
 import dominion.*;
 import dominion.card.*;
 
@@ -9,14 +9,16 @@ import dominion.card.*;
  * +3 Cartes.
  */
 public class Smithy extends ActionCard {
-	public Smithy() { super("Smithy", 4);	}
+	public Smithy() {
+		super("Smithy", 4);
+	}
 
 	@Override
 	public void play(Player player) {
-		int i=0;
-		while(i<3){
+		int i = 0;
+		while (i < 3) {
 			player.get_hand().add(player.drawCard());
 			i++;
-		}		
+		}
 	}
 }
