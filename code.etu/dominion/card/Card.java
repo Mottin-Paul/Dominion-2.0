@@ -1,4 +1,5 @@
 package dominion.card;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,12 +21,15 @@ public abstract class Card {
 
 	/**
 	 * Constructeur simple
-	 * @param name le nom de la carte
-	 * @param cost le coût de la carte
+	 * 
+	 * @param name
+	 *            le nom de la carte
+	 * @param cost
+	 *            le coût de la carte
 	 */
 	public Card(String name, int cost) {
-		this.name=name;
-		this.cost=cost;
+		this.name = name;
+		this.cost = cost;
 	}
 
 	/**
@@ -47,9 +51,9 @@ public abstract class Card {
 	 * {@code ArrayList} vide, auquel les sous-classes ajouteront les types.
 	 */
 	public List<CardType> getTypes() {
-		
+
 		List<CardType> typeList;
-		typeList=new ArrayList<CardType>();
+		typeList = new ArrayList<CardType>();
 		return typeList;
 	}
 
@@ -64,26 +68,29 @@ public abstract class Card {
 	/**
 	 * Exécute l'effet de la carte, jouée par le joueur {@code p}
 	 *
-	 * @param p joueur qui exécute l'effet de la carte
+	 * @param p
+	 *            joueur qui exécute l'effet de la carte
 	 *
-	 * L'action de cette méthode dépend de la classe de la carte.
+	 *            L'action de cette méthode dépend de la classe de la carte.
 	 */
 	public abstract void play(Player p);
 
 	/**
 	 * Renvoie la valeur de la carte en points de victoire (c'est cette méthode
-	 * qui est appelée sur toutes les cartes du deck d'un joueur pour
-	 * déterminer le score du joueur en fin de partie)
+	 * qui est appelée sur toutes les cartes du deck d'un joueur pour déterminer
+	 * le score du joueur en fin de partie)
 	 *
-	 * @param p joueur qui possède la carte (la valeur d'une carte peut dépendre du joueur qui la possède, c'est le cas des cartes Gardens)
+	 * @param p
+	 *            joueur qui possède la carte (la valeur d'une carte peut
+	 *            dépendre du joueur qui la possède, c'est le cas des cartes
+	 *            Gardens)
 	 *
-	 * Toutes les cartes qui ne sont pas de type Victoire ont une valeur de 0
-	 * (la méthode devra donc être redéfinie pour les cartes ayant une valeur
-	 * non nulle).
+	 *            Toutes les cartes qui ne sont pas de type Victoire ont une
+	 *            valeur de 0 (la méthode devra donc être redéfinie pour les
+	 *            cartes ayant une valeur non nulle).
 	 */
 	public int victoryValue(Player p) {
 		return 0;
 	}
-
 
 }

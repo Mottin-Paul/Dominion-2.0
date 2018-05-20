@@ -1,4 +1,5 @@
 package dominion.card;
+
 import java.util.List;
 
 /**
@@ -6,18 +7,17 @@ import java.util.List;
  */
 public abstract class CurseCard extends Card {
 
-
-  public CurseCard(String name, int cost) {
+	public CurseCard(String name, int cost) {
 		super(name, cost);
 	}
 
-public String toString(){
-      return super.toString();
-  }
+	public String toString() {
+		return super.toString();
+	}
 
-  public List<CardType> getTypes(){
-    List<CardType> type_list = super.getTypes();
-    type_list.add(CardType.Curse);
-    return type_list;
-  }
+	public List<CardType> getTypes() {
+		List<CardType> type_list = super.getTypes();
+		type_list.add(CardType.Curse);
+		return type_list;
+	}
 }
