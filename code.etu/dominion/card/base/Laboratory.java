@@ -12,6 +12,11 @@ public class Laboratory extends ActionCard {
 	public Laboratory() {
 		super("Laboratory", 5);
 	}
+	
+	public String toString() {
+		return super.toString()
+				+ " +2 Cartes. +1 Action.";
+	}
 
 	@Override
 	public void play(Player player) {

@@ -13,6 +13,10 @@ public class Woodcutter extends ActionCard {
 		super("Woodcutter", 3);
 	}
 
+	public String toString() {
+		return super.toString() + " +1 Achat. +2 Pièces";
+	}
+
 	@Override
 	public void play(Player player) {
 		player.incrementBuys(1);

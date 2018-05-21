@@ -13,6 +13,10 @@ public class Smithy extends ActionCard {
 		super("Smithy", 4);
 	}
 
+	public String toString() {
+		return super.toString() + " +3 Cartes.";
+	}
+
 	@Override
 	public void play(Player player) {
 		int i = 0;

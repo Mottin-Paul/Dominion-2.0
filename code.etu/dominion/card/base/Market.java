@@ -14,6 +14,10 @@ public class Market extends ActionCard {
 		super("Market", 5);
 	}
 
+	public String toString() {
+		return super.toString() + " +1 Carte. +1 Action. +1 Achat. +1 Pièce.";
+	}
+
 	@Override
 	public void play(Player player) {
 		player.get_hand().add(player.drawCard());

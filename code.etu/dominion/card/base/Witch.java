@@ -1,6 +1,7 @@
 package dominion.card.base;
 
 import java.util.*;
+
 import dominion.*;
 import dominion.card.*;
 
@@ -12,6 +13,11 @@ import dominion.card.*;
 public class Witch extends AttackCard {
 	public Witch() {
 		super("Witch", 5);
+	}
+
+	public String toString() {
+		return super.toString()
+				+ " +2 Cartes. Tous vos adversaires recoivent une carte Curse.";
 	}
 
 	@Override

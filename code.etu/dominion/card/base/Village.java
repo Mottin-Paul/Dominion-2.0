@@ -13,6 +13,10 @@ public class Village extends ActionCard {
 		super("Village", 3);
 	}
 
+	public String toString() {
+		return super.toString() + " +1 Carte. +2 Actions.";
+	}
+
 	@Override
 	public void play(Player player) {
 		player.incrementActions(2);

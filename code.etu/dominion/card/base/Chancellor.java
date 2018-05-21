@@ -16,6 +16,11 @@ public class Chancellor extends ActionCard {
 		super("Chancellor", 3);
 	}
 
+	public String toString() {
+		return super.toString()
+				+ "+2 Pièces. Vous pouvez immédiatement défausser votre deck.";
+	}
+
 	@Override
 	public void play(Player player) {
 		player.incrementMoney(2);

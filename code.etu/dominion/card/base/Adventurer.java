@@ -16,6 +16,12 @@ public class Adventurer extends ActionCard {
 		super("Adventurer", 6);
 	}
 
+	public String toString() {
+		return super.toString()
+				+ " Dévoilez des cartes de votre deck jusqu'à ce que 2 cartes Trésor soient dévoilées."
+				+ " Ajoutez ces cartes Trésor à votre main et défaussez les autrescartes dévoilées.";
+	}
+
 	@Override
 	public void play(Player player) {
 		int nb_card_revealed = 0;

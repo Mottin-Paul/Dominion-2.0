@@ -16,10 +16,10 @@ public class Mine extends ActionCard {
 	}
 
 	public String toString() {
-		return super.toString() + " "
+		return super.toString()
+				+ " "
 				+ " Écartez une carte Trésor de votre main."
-				+ " Recevez une carte Trésor coûtant jusqu'à 3 Pièces de plus "
-				+ " et ajoutez cette carte à votre main.";
+				+ " Recevez une carte Trésor coûtant jusqu'à 3 Pièces de plus et ajoutez cette carte à votre main.";
 	}
 
 	public void play(Player player) {

@@ -20,10 +20,9 @@ public class Thief extends AttackCard {
 
 	public String toString() {
 		return super.toString()
-				+ " Tous vos adversaires dévoilent les 2 premières cartes de leur deck.\n"
+				+ " Tous vos adversaires dévoilent les 2 premières cartes de leur deck. \n"
 				+ " S'ils dévoilent des cartes Trésor, ils en écartent 1 de votre choix.\n"
-				+ " Parmi ces cartes Trésor écartées, recevez celles de votre choix.\n"
-				+ " Les autres cartes dévoilées sont défaussées.";
+				+ " Parmi ces cartes Trésor écartées, recevez celles de votre choix. Les autres cartes dévoilées sont défaussées.";
 	}
 
 	public void play(Player player) {

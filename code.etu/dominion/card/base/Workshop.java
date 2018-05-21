@@ -13,6 +13,11 @@ public class Workshop extends ActionCard {
 		super("Workshop", 3);
 	}
 
+	public String toString() {
+		return super.toString()
+				+ " Recevez une carte coûtant jusqu'à 4 Pièces.";
+	}
+
 	@Override
 	public void play(Player player) {
 		CardList supply_cards = player.getGame().availableSupplyCards();

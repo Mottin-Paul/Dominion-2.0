@@ -14,6 +14,12 @@ public class Militia extends AttackCard {
 		super("Militia", 4);
 	}
 
+	public String toString() {
+		return super.toString()
+				+ " +1 Carte. +1 Action. +1 Achat. +1 Pièce."
+				+ " Tous vos adversaires défaussent leurs cartes de façon à n'avoir que 3 cartes en main.";
+	}
+
 	@Override
 	public void play(Player player) {
 		player.incrementMoney(2);

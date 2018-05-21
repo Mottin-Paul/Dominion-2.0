@@ -14,6 +14,10 @@ public class Festival extends ActionCard {
 		super("Festival", 5);
 	}
 
+	public String toString() {
+		return super.toString() + " +2 Actions. +1 Achat. +2 Pièces.";
+	}
+
 	@Override
 	public void play(Player player) {
 		player.incrementActions(2);
