@@ -18,7 +18,8 @@ public class Chancellor extends ActionCard {
 
 	public String toString() {
 		return super.toString()
-				+ "+2 Pièces. Vous pouvez immédiatement défausser votre deck.";
+				+ "+2 Pièces.\n"
+				+ " Vous pouvez immédiatement vous défaire de votre pioche complète.";
 	}
 
 	@Override

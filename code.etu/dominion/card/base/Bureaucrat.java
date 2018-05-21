@@ -20,9 +20,9 @@ public class Bureaucrat extends AttackCard {
 
 	public String toString() {
 		return super.toString()
-				+ "Recevez une carte Argent, placez-la sur votre deck."
-				+ " Tous vos adversaires dévoilent une carte Victoire et la placent sur leur deck,"
-				+ " (sinon ils dévoilent leur main afin que vous puissiez voir qu'ils n'ont pas de cartes Victoire).";
+				+ " Prenez un argent et posez-le face cachée sur votre deck."
+				+ " Tous les autres joueurs placent une carte point de leur main face cachée sur leur deck."
+				+ " Si un joueur n'a aucune carte point en main, il doit montrer ses cartes en main.";
 	}
 
 	@Override

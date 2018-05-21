@@ -14,8 +14,7 @@ public class Workshop extends ActionCard {
 	}
 
 	public String toString() {
-		return super.toString()
-				+ " Recevez une carte coûtant jusqu'à 4 Pièces.";
+		return super.toString() + " Prenez une carte qui coûte jusqu'à 4.";
 	}
 
 	@Override

@@ -19,7 +19,7 @@ public class Gardens extends VictoryCard {
 
 	public String toString() {
 		return super.toString()
-				+ " Vaut 1VP pour chaque 10 cartes dans votre deck (arrondir à l'unité inférieure).";
+				+ " 1 point de victoire pour chaque série de 10 cartes dans le jeu complet (arrondi à l'inférieur).";
 	}
 
 	public int victoryValue(Player player) {

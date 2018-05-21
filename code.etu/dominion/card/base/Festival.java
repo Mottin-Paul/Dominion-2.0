@@ -15,7 +15,7 @@ public class Festival extends ActionCard {
 	}
 
 	public String toString() {
-		return super.toString() + " +2 Actions. +1 Achat. +2 Pièces.";
+		return super.toString() + " +2 Actions.\n +1 Achat.\n +2 Pièces.";
 	}
 
 	@Override

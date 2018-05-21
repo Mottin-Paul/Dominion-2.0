@@ -14,7 +14,7 @@ public class Village extends ActionCard {
 	}
 
 	public String toString() {
-		return super.toString() + " +1 Carte. +2 Actions.";
+		return super.toString() + " +1 Carte.\n +2 Actions.";
 	}
 
 	@Override

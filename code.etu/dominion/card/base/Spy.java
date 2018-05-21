@@ -19,8 +19,9 @@ public class Spy extends AttackCard {
 
 	public String toString() {
 		return super.toString()
-				+ " +1 Carte. +1 Action. Tous les joueurs (vous aussi) dévoilent la première carte de leur deck. \n "
-				+ " Vous décidez ensuite si chaque carte dévoilée est défaussée ou replacée sur son deck.";
+				+ " +1 Carte.\n +1 Action.\n"
+				+ " Chaque joueur (y compris vous) révèle la première carte de sa pioche."
+				+ " Vous décidez si vous devez le défausser ou le remettre sur sa pioche.";
 	}
 
 	public void play(Player player) {

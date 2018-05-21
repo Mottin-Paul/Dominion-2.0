@@ -15,6 +15,13 @@ public class Cellar extends ActionCard {
 		super("Cellar", 2);
 	}
 
+	public String toString() {
+		return super.toString()
+				+ "+1 Action.\n"
+				+ " Posez n'importe quel nombre de cartes."
+				+ " Piochez une carte pour chaque carte que vous avez mise au rebut.";
+	}
+
 	@Override
 	public void play(Player player) {
 		player.incrementActions(1);

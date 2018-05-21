@@ -16,7 +16,7 @@ public class Moneylender extends ActionCard {
 
 	public String toString() {
 		return super.toString()
-				+ "Écartez une carte Cuivre de votre main. Dans ce cas, +3 Pièces.";
+				+ " Jetez un cuivre de votre main. Si vous faites cela, +3 d'argent.";
 	}
 
 	@Override

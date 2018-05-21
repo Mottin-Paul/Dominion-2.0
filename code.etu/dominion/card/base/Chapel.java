@@ -15,7 +15,7 @@ public class Chapel extends ActionCard {
 	}
 
 	public String toString() {
-		return super.toString() + "Écartez jusqu'à 4 cartes de votre main.";
+		return super.toString() + "Eliminez jusqu'à 4 cartes de votre main.";
 	}
 
 	public void play(Player player) {

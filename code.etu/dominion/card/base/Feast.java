@@ -15,7 +15,7 @@ public class Feast extends ActionCard {
 
 	public String toString() {
 		return super.toString()
-				+ " Écartez cette carte. Recevez une carte coûtant jusqu'à 5 Pièces.";
+				+ " Eliminez cette carte. Prenez une carte qui coûte jusqu'à 5.";
 	}
 
 	@Override

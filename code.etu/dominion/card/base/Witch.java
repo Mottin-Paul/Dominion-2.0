@@ -16,8 +16,8 @@ public class Witch extends AttackCard {
 	}
 
 	public String toString() {
-		return super.toString()
-				+ " +2 Cartes. Tous vos adversaires recoivent une carte Curse.";
+		return super.toString() + " +2 Cartes.\n"
+				+ " Chaque joueur doit prendre une carte de malédiction.";
 	}
 
 	@Override

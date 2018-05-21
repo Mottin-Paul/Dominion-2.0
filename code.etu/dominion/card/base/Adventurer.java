@@ -18,8 +18,8 @@ public class Adventurer extends ActionCard {
 
 	public String toString() {
 		return super.toString()
-				+ " Dévoilez des cartes de votre deck jusqu'à ce que 2 cartes Trésor soient dévoilées."
-				+ " Ajoutez ces cartes Trésor à votre main et défaussez les autrescartes dévoilées.";
+				+ " Piochez dans votre deck jusqu'à ce que 2 cartes trésor soient dévoilées."
+				+ " Ajoutez ces cartes trésor à votre main et défaussez les autres cartes dévoilées.";
 	}
 
 	@Override
