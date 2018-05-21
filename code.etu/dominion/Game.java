@@ -52,7 +52,6 @@ public class Game {
 	 *            est le nombre de joueurs dans la partie
 	 */
 
-	// Création du stock de base des cartes
 	private void Base_carte_stock(String[] player_names,
 			List<CardList> kingdom_stacks) {
 

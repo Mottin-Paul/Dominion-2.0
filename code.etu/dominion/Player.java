@@ -86,8 +86,6 @@ public class Player {
 		this.discard = new CardList();
 		this.hand = new CardList();
 
-		// Le joueur reçoit 3 cartes domaines et 7 cartes cuivre dans sa
-		// deffausse
 		int i = 0;
 		while (i < 3) {
 			this.gain(new Estate());
@@ -100,7 +98,6 @@ public class Player {
 			j++;
 		}
 
-		// Le joueur pioche 5 cartes
 		int k = 0;
 		while (k < 5) {
 			this.hand.add(drawCard());
@@ -483,35 +480,35 @@ public class Player {
 	 * </pre>
 	 */
 	public String choose(String instruction, List<String> choix, boolean canPass) {
-		// La liste de choix est convertie en ensemble pour éviter les doublons
+
 		Set<String> choixSet = new HashSet<String>();
 		for (String c : choix) {
 			choixSet.add(c);
 		}
 		if (choixSet.isEmpty()) {
-			// Aucun choix disponible
+
 			return "";
 		} else if (choixSet.size() == 1 && !canPass) {
-			// Un seul choix possible (renvoyer cet unique élément)
+
 			return choixSet.iterator().next();
 		} else {
 			String input;
-			// Lit l'entrée de l'utilisateur jusqu'à obtenir un choix valide
+
 			while (true) {
 				System.out.print("\n\n");
-				// affiche l'état du jeu
+
 				System.out.print(this.game);
 				System.out.print("\n");
-				// affiche l'état du joueur
+
 				System.out.print(this);
 				System.out.print("\n");
-				// affiche l'instruction
+
 				System.out.println(">>> " + instruction);
 				System.out.print("> ");
-				// lit l'entrée de l'utilisateur au clavier
+
 				input = this.game.readLine();
 				if (choixSet.contains(input) || (canPass && input.equals(""))) {
-					// si une réponse valide est obtenue, elle est renvoyée
+
 					return input;
 				}
 			}
@@ -557,13 +554,13 @@ public class Player {
 	 * </pre>
 	 */
 	public String chooseCard(String instruction, CardList choix, boolean canPass) {
-		// liste de noms de cartes
+
 		List<String> stringChoices = new ArrayList<String>();
 		for (Card c : choix) {
-			// tous les noms sont ajoutés à l'ensemble
+
 			stringChoices.add(c.getName());
 		}
-		// appel de la méthode précédente en passant l'ensemble de noms
+
 		return this.choose(instruction, stringChoices, canPass);
 	}
 
